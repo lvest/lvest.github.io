@@ -44,6 +44,71 @@ h2 {
     margin: 0.3em 0;
   }
 }
+header {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin: 16px 100px;
+  padding: 8px 22px;
+  background-color: #e3e3e3;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  ul {
+    display: flex;
+    background-color: #e3e3e3;
+    gap: 1rem;
+  }
+  li {
+    list-style: none;
+    font-size: 22px;
+  }
+  .posts-labelgroup {
+    margin: 0 0 0.67em 0;
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid #eee;
+    @media screen and (min-width: $mobileW + 1) {
+      max-width: calc(100% - #{$leftWidth});
+      margin-left: 20px;
+      width: 100%;
+    }
+  }
+  #posts-label {
+    font-size: 15px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+    font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    transition: width 0.1s;
+  }
+  @media screen and (min-width: $bigScreenW) {
+    margin: 16px 100px;
+    max-width: 1440px;
+  }
+  @media screen and (max-width: 1280px) {
+    margin: 16px 80px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin: 16px 60px;
+  }
+
+  @media screen and (max-width: $mobileW) {
+    margin: 16px 40px;
+    .posts-labelgroup {
+      display: none;
+    }
+  }
+  @media screen and (max-width: $smallMobileW) {
+    margin: 16px 20px;
+    .posts-labelgroup {
+      display: none;
+    }
+  }
+}
 main {
   margin: 0 90px;
   display: flex;
@@ -268,24 +333,7 @@ main {
     font-family: Raleway, sans-serif;
   }
 }
-.posts-labelgroup {
-  margin: 0 0 0.67em 0;
-  display: flex;
-  align-items: baseline;
-  border-bottom: 1px solid #eee;
-}
 
-#posts-label {
-  font-size: 15px;
-  color: #555;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 10px 0;
-  font-weight: normal;
-  margin: 0;
-  overflow: hidden;
-  transition: width 0.1s;
-}
 table {
   th,
   td {

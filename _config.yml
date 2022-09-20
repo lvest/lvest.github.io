@@ -14,9 +14,11 @@ plainwhite:
   name: Park Yerin
   tagline: Frontend Developer
   date_format: "%b %-d, %Y"
+  category:
+    - title: FrontEnd
   navigation:
-    # - title: Category
-    #   url: "/category"
+    - title: Category
+      url: "/category"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
